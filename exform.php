@@ -18,11 +18,11 @@ $username = $_POST['username'];
 
 $birthday = $_POST['birthday'];
 
-$adress = $_POST['adress'];
+$address = $_POST['address'];
 
 $email = $_POST['email'];
 
-$sql = "INSERT INTO user (name, username, birthday, address, email) VALUES ('$name', '$username', '$birthday', '$adress', '$email' ')";
+$sql = "INSERT INTO user (name, username, birthday, address, email) VALUES ('$name', '$username', '$birthday', '$address', '$email' )";
 
 $pdo->exec($sql);
 

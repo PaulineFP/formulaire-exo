@@ -29,16 +29,31 @@ $user = $query->fetchAll();
 
 
     <?php foreach ($user as $item): ?>
-
+<div>
      <tr>
-        <td><?php echo  $item["name"] ?></td>
-        <td><?php echo  $item["username"] ?></td>
-        <td><?php echo  $item["birthday"] ?></td>
-        <td><?php echo  $item["address"] ?></td>
-        <td><?php echo  $item["email"] ?></td>
-     </tr>
+        <td><?php echo  $item["name"] ?>
+        <a href="supprimer.php?numContact<?= $item['id']?>">Suprimer</a>
+    </td>
+        <td><?php echo  $item["username"] ?>
+       
 
-    <?php endforeach ?>
+    </td>
+        <td><?php echo  $item["birthday"] ?>
+        
+
+    </td>
+        <td><?php echo  $item["address"] ?>
+       
+    </td>
+        <td><?php echo  $item["email"] ?>
+        
+    </td>
+        
+
+     </tr>
+    </div>
+     <?php endforeach ?>
+   
 
     </table>
     

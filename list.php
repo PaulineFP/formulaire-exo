@@ -13,22 +13,34 @@ $user = $query->fetchAll();
 <head>
 <meta charset="utf-8">
 <title>Titre de la page</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<link rel="stylesheet" href="Style.css">
 </head>
 <body>
 
 <table class="table">
+
     <tr>
         <th>name</th>
         <th>username</th>
+        <th>birthday</th>
+        <th>adress</th>
+        <th>email</th>
     </tr>
+
+
     <?php foreach ($user as $item): ?>
+
      <tr>
         <td><?php echo  $item["name"] ?></td>
         <td><?php echo  $item["username"] ?></td>
+        <td><?php echo  $item["birthday"] ?></td>
+        <td><?php echo  $item["address"] ?></td>
+        <td><?php echo  $item["email"] ?></td>
      </tr>
+
     <?php endforeach ?>
+
     </table>
+    
 </body>
 </html>

@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(30, 197, 197, 0.164);
+}
+
+.container{
+    background: #ffffff;
+    max-width: 940px;
+    margin: 3em auto 0;
+    margin-bottom: 3em;
+    border-radius: 20px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+}
+
+.title{
+    padding-top: 1em;
+    text-align: center;
+    text-decoration: underline 0.5px;
+    font-family: Castellar,Felix Titling,sans-serif;
+    color: rgb(22, 80, 156);
+}
+
+.imput{
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+input{
+    margin-bottom: 1em;
+}
+
+.envoyer {
+    padding: 10px ;
+    transition: all 0.s;
+    border: 1px solid black;
+    border-radius: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.envoyer:hover{
+    cursor: pointer;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes grow{
+    0%{
+        font-size: 10px;
+        background-color: rgba(218, 44, 44, 0.74);
+    }
+
+    25%{
+        font-size: 15px;
+        background-color: rgba(245, 245, 69, 0.884);
+    }
+
+    50% { font-size: 20px;
+        background-color: rgba(70, 199, 70, 0.808);
+    }
+
+    75%{
+        font-size: 25px; 
+        background-color: rgb(138, 138, 228) ;
+    }
+    100% {
+        font-size: 30px;
+        background-color: rgba(163, 46, 163, 0.637);
+    }
+}
+   

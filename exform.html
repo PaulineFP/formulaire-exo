@@ -5,29 +5,32 @@
 
     <meta charset="utf-8">
     <title>Formulaire</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="exform.css">
 
 </head>
 
-<h1 class="title">Formulaire d'inscription</h1>
+<div class="container">
 
-<form action="exform.php" method="POST">
+    <h1 class="title">Formulaire d'inscription</h1>
 
-    <label>Nom</label>
-    <input type="text" name="name"></br>
-    <label>Prénom</label>
-    <input type="text" name="username"></br>
+    <form action="exform.php" method="POST">
+        <div class="imput">
+            <label>Nom</label>
+            <input type="text" name="name"></br>
+            <label>Prénom</label>
+            <input type="text" name="username"></br>
 
-    <label>Date de naissance</label>
-    <input type="date" name="DateDeNaissance"></br>
+            <label>Date de naissance</label>
+            <input type="date" name="birthday"></br>
 
-    <label>Adresse</label>
-    <input type="text" name="adresse"></br>
+            <label>Adresse</label>
+            <input type="text" name="address"></br>
 
-    <label>email</label>
-    <input type="email" name="email"></br>
-    <input type="submit">
-
-</form>
+            <label>E-mail</label>
+            <input type="text" name="email"></br>
+            <input type="submit" class='envoyer'>
+        </div>
+    </form>
+</div>
 
 </html>

@@ -10,29 +10,22 @@ empty () : verifie qu'une variable est vide
 is_null() : verifie qu'une variable est nulle (la vraible doit exister)
 */ 
 
+
+
 $name = $_POST['name'];
 
 $username = $_POST['username'];
 
-/*
-$DateDeNaissance = $_POST['date-de-naissance'];
+$birthday = $_POST['birthday'];
 
-$adresse = $_POST['adresse'];
+$adress = $_POST['adress'];
 
 $email = $_POST['email'];
-*/
 
-
-$sql = "INSERT INTO user (name, username) VALUES ('$name', '$username')";
+$sql = "INSERT INTO user (name, username, birthday, address, email) VALUES ('$name', '$username', '$birthday', '$adress', '$email' ')";
 
 $pdo->exec($sql);
 
 
-/*
-while ($donnees = $query->fetch())
-{
-echo $donnees['nom'];
-}
-*/
 ?>
 

@@ -5,13 +5,14 @@ $pdo = new PDO('mysql:host=mysql;dbname=basedetest;host=127.0.0.1', 'root', '', 
 ]);
 
 
-$query = $pdo->prepare('DELETE FROM user WHERE id=:num');
+$id = $_REQUEST["article_delete"];
+$id = intval($id);
+$req = $pdo->prepare("DELETE FROM article WHERE id = $id ");
+$req->execute();
 
 
-$query->bindValue(':num', $_GET['numContact'],PDO::PARAM_INT);
+/*$query->bindParam(':num', $_GET['numContact']);*/
 
-
-$ok = $pdoStat->execute();
 
 
 /*
@@ -43,8 +44,6 @@ else{
 <body>
 
 <h1>Suppression</h1>
-
-<p><?= message ?></p>
 </body>
 </html>
 

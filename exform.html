@@ -8,29 +8,51 @@
     <link rel="stylesheet" href="exform.css">
 
 </head>
-
-<div class="container">
-
-    <h1 class="title">Formulaire d'inscription</h1>
+<body style= "background-color: rgba(231, 240, 238, 0.651)">
+   <div class="container">
+    <h1 class="text-center p-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: cornflowerblue;" ;"><ins>Formulaire d'inscription</ins></h1>
 
     <form action="exform.php" method="POST">
-        <div class="imput">
-            <label>Nom</label>
-            <input type="text" name="name"></br>
-            <label>Prénom</label>
-            <input type="text" name="username"></br>
 
-            <label>Date de naissance</label>
-            <input type="date" name="birthday"></br>
+        <div class="form-group shadow p-3 mb-5 bg-white rounded">
 
-            <label>Adresse</label>
-            <input type="text" name="address"></br>
+            
+                <div class="row ">
+                  <div class="col sm-2">
+                    <input type="text" name="name" class="form-control" placeholder="First name">
+                  </div>
+                  <div class="col sm-2">
+                    <input type="text" name="username" class="form-control" placeholder="Last name">
+                  </div>
+                </div>
 
-            <label>E-mail</label>
-            <input type="text" name="email"></br>
-            <input type="submit" class='envoyer'>
+            <label class="col-sm-2 col-form-label text-center"for="date">Date de naissance</label>
+            <input class="col-sm form-control text-center" type="date" name="birthday">
+      
+            <label class="col sm-2col-form-label" for="inputAddress">Address</label>
+            <input type="text"  name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
+
+            <!--liste déroulante-->
+
+            <div class="form-group col ">
+              <label for="inputState ">Pays</label>
+              <select id="inputState" class="form-control sm-2">
+                  <option selected>Select</option>
+                  <option>France</option>
+                  <option>Canada</option>
+                  <option>Luxambourg</option>
+                  <option>Suice</option>
+              </select>
+          </div>
+
+            <label class="col-md-mdcol-form-label">E-mail</label>
+            <input type="text" name="email"class="form-control"  placeholder="name@example.com">
+
+            <div class="p-4">
+            <button type="submit" class="btn btn-primary ">Envoyer</button>
         </div>
+    </div>
     </form>
 </div>
-
+</body>
 </html>

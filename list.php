@@ -52,10 +52,10 @@ $user = $query->fetchAll();
 
     <td><a  class="delete" href="supprimer.php?lign_delete=<?= intval($item['id']) ?> ">Supprimer</a></td>
 
-    <td> <a  class="update" href="modifier.php?ligne_update=<?= intval($item['id']) ?> ">modifier</a></td>
+    <td> <a  class="update" href="form_of_modif.php?ligne_update=<?= intval($item['id']) ?> ">modifier</a></td>
     
     </tr>
-    
+
     </div>
      <?php endforeach ?>
    

@@ -26,15 +26,33 @@ $item = $ins->fetch();
 
 <form action="modifier.php" method="POST">
 
-    <imput type="text"    name="name" placeholder="Ecrit ton nom"> 
-    <imput type="text"    name="username">
-    <imput type="date"    name="birthday">
-    <imput type="text"    name="address">
-    <imput type="text"    name="email">
+        <div class="form-group shadow p-3 mb-5 bg-white rounded">
 
-    <input type="submit" name="Modification" value="Modifier">
+        <input type="hidden" name="id" value="<?= $article['id']?>">
+                <div class="row ">
+                  <div class="col sm-2">
+                    <input type="text" name="name" class="form-control" placeholder="First name">
+                  </div>
+                  <div class="col sm-2">
+                    <input type="text" name="username" class="form-control" placeholder="Last name">
+                  </div>
+                </div>
 
-</form>
+            <label class="col-sm-2 col-form-label text-center"for="date">Date de naissance</label>
+            <input class="col-sm form-control text-center" type="date" name="birthday">
+      
+            <label class="col sm-2col-form-label" for="inputAddress">Address</label>
+            <input type="text"  name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
 
+          </div>
+
+            <label class="col-md-mdcol-form-label">E-mail</label>
+            <input type="text" name="email"class="form-control"  placeholder="name@example.com">
+
+            <div class="p-4">
+            <button type="submit" class="btn btn-primary ">Envoyer</button>
+        </div>
+    </div>
+    </form>
 </body>
 </html>

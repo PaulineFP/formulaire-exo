@@ -4,7 +4,8 @@ $pdo = new PDO('mysql:host=mysql;dbname=basedetest;host=127.0.0.1', 'root', '', 
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ]);
 
-$id = $_REQUEST["lign_update"];
+if(isset($_POST['id'])){
+$id = $_REQUEST['id'];
 
 $id = intval($id); /*Change la valeur en int*/
 
@@ -14,11 +15,11 @@ $birthday = $_POST["birthday"];
 $address = $_POST["address"];
 $email = $_POST["email"];
 
-$sql = "UPDATE user SET name = '$name', username = '$username', birthday = '$birthday', 'address'= '$address', email ='$email'  WHERE id ='$id'";
+$sql =$pdo->prepare("UPDATE user SET 'name' = '$name', username = '$username', birthday = '$birthday', 'address'= '$address', email ='$email'  WHERE id ='$id'");
 
 
 $sql->execute();
-
+}
 
 ?>
 

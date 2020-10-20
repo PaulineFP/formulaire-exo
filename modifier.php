@@ -8,14 +8,16 @@ $id = $_REQUEST["lign_update"];
 
 $id = intval($id); /*Change la valeur en int*/
 
+$name = $_POST["name"];
+$username = $_POST["username"];
+$birthday = $_POST["birthday"];
+$address = $_POST["address"];
+$email = $_POST["email"];
 
-/*$sql = "UPDATE user SET .... WHERE id = $id";*/
+$sql = "UPDATE user SET name = '$name', username = '$username', birthday = '$birthday', 'address'= '$address', email ='$email'  WHERE id ='$id'";
 
 
-
-
-
-$req->execute();
+$sql->execute();
 
 
 ?>

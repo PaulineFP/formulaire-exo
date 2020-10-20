@@ -50,12 +50,7 @@ $user = $query->fetchAll();
         <td><?php echo  $item["email"] ?>
         
     </td>
-
-    <td>
-        <?php echo $item["pays"]?>
-    </td>
-        
-
+    
      </tr>
     </div>
      <?php endforeach ?>

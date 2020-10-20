@@ -23,9 +23,7 @@ $address = $_POST["address"];
 $email = $_POST["email"];
 var_dump($email);
 
-$pays = $_POST["pays"];
-
-$sql = "INSERT INTO user (name, username, birthday, address, email, pays) VALUES ('$name', '$username', '$birthday', '$address', '$email', '$pays')";
+$sql = "INSERT INTO user (name, username, birthday, address, email, pays) VALUES ('$name', '$username', '$birthday', '$address', '$email')";
 var_dump($sql);
 $pdo->exec($sql);
 

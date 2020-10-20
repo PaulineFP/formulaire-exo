@@ -5,9 +5,12 @@ $pdo = new PDO('mysql:host=mysql;dbname=basedetest;host=127.0.0.1', 'root', '', 
 ]);
 
 
-$id = $_REQUEST["article_delete"];
+$id = $_REQUEST["lign_delete"];
+
 $id = intval($id);
-$req = $pdo->prepare("DELETE FROM article WHERE id = $id ");
+
+$req = $pdo->prepare("DELETE FROM user WHERE id = $id ");
+
 $req->execute();
 
 
@@ -32,6 +35,7 @@ else{
 }
 
 */
+
 ?>
 
 <!doctype html>

@@ -25,7 +25,6 @@ $user = $query->fetchAll();
         <th>birthday</th>
         <th>adress</th>
         <th>email</th>
-        <th>pays</th>
     </tr>
 
 
@@ -34,7 +33,7 @@ $user = $query->fetchAll();
 <div>
      <tr>
         <td><?php echo  $item["name"] ?>
-        <a  class="delete" href="delete.php?article_delete=<?= intval($article['id']) ?> ">Supprimer</a>
+        <a  class="delete" href="supprimer.php?lign_delete=<?= intval($item['id']) ?> ">Supprimer</a>
     </td>
         <td><?php echo  $item["username"] ?>
        
@@ -50,7 +49,7 @@ $user = $query->fetchAll();
         <td><?php echo  $item["email"] ?>
         
     </td>
-    
+
      </tr>
     </div>
      <?php endforeach ?>

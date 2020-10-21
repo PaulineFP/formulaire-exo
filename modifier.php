@@ -5,20 +5,19 @@ $pdo = new PDO('mysql:host=mysql;dbname=basedetest;host=127.0.0.1', 'root', '', 
 ]);
 
 if(isset($_POST['id'])){
-$id = $_REQUEST['id'];
 
-$id = intval($id); /*Change la valeur en int*/
+    $id = $_REQUEST['id'];
+    $id = intval($id); /*Change la valeur en int*/
 
-$name = $_POST["name"];
-$username = $_POST["username"];
-$birthday = $_POST["birthday"];
-$address = $_POST["address"];
-$email = $_POST["email"];
+    $name = $_POST['name'];
+    $username = $_POST['username']; 
+    $birthday = $_POST['birthday'];
+    $address = $_POST['address'];
+    $email = $_POST['email'];
 
-$sql =$pdo->prepare("UPDATE user SET 'name' = '$name', username = '$username', birthday = '$birthday', 'address'= '$address', email ='$email'  WHERE id ='$id'");
-
-
-$sql->execute();
+    $req = $pdo->prepare("UPDATE user SET name = '$name', username = '$username', birthday = '$birthday', address = '$address', email ='$email'  WHERE id = '$id'");
+    var_dump($req);
+    $req->execute();
 }
 
 ?>

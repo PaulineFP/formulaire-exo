@@ -4,31 +4,30 @@ $pdo = new PDO('mysql:host=mysql;dbname=basedetest;host=127.0.0.1', 'root', '', 
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ]);
 
-$ins = $pdo->prepare('SELECT * FROM user WHERE id= :num');
+$ins = $pdo->prepare('SELECT * FROM user WHERE id=:num');
 
-$ins->bindParam(':num', $_GET['Modification']);
+$ins->bindParam(':num', $_GET['ligne_update']);
 $ins->execute();
 
 $item = $ins->fetch();
+
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylseet" href="exform.css">
-    <title> Modification</tilte>
-<head>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link rel="stylesheet" href="exform.css">
+</head>
 <body>
 
 <form action="modifier.php" method="POST">
 
         <div class="form-group shadow p-3 mb-5 bg-white rounded">
 
-        <input type="hidden" name="id" value="<?= $article['id']?>">
+        <input type="hidden" name="id" value="<?= $item['id']?>">
                 <div class="row ">
                   <div class="col sm-2">
                     <input type="text" name="name" class="form-control" placeholder="First name">
@@ -44,13 +43,12 @@ $item = $ins->fetch();
             <label class="col sm-2col-form-label" for="inputAddress">Address</label>
             <input type="text"  name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
 
-          </div>
-
             <label class="col-md-mdcol-form-label">E-mail</label>
             <input type="text" name="email"class="form-control"  placeholder="name@example.com">
+          </div>
 
             <div class="p-4">
-            <button type="submit" class="btn btn-primary ">Envoyer</button>
+            <button type="submit" name="ligne_update" class="btn btn-primary">Envoyer</button>
         </div>
     </div>
     </form>
